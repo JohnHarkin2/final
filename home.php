@@ -96,6 +96,28 @@ if (isset($_SESSION['uemail'])){
 		<p> here you can review products and upload images of them </p>
 	</main>
 	
+<!--new stuff from Alex :)-->
+	
+<?php
+//connect to sql database
+	$conn = new mysqli('localhost', 'root', '', 'website'
+
+		); 
+//Slecting review table
+		$select = "SELECT * FROM review;";
+//Adding results to query
+		$result = mysqli_query($conn, $select);
+//Checking for results
+		$resultCheck = mysqli_num_rows($result);
+//if reults add to array
+		if ($resultCheck > 0) {
+			while ($row = mysqli_fetch_assoc($result)) {
+					echo $row['review'];
+					echo "    ";
+					echo $row['image'];
+		} }
+?>
+		
 	<footer>
 		<p> footer </p>
 	</footer>
