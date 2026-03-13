@@ -117,7 +117,6 @@ button:hover {
 
 <form method="POST" style="border:1px solid #ccc">
   <div class="container">
-	<a href="home.php">Home</a>
     <h1>Forgot Password</h1>
     <p>Please enter your email to reset password</p>
     <input type="email" placeholder="Enter Email" name="email" required>
@@ -128,4 +127,5 @@ button:hover {
 </form>
 
 </body>
+
 </html>
