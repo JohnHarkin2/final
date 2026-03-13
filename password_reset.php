@@ -11,7 +11,7 @@ $result = mysqli_query($conn,$query);
 
 if(mysqli_num_rows($result) == 0){
 echo("Invalid token");
-die;
+exit();
 // kills the process invalid token found
 }
 
