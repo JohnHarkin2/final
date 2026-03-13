@@ -26,7 +26,7 @@ mysqli_query($conn,$update);
 
 // updates database with current reset token
 
-$link = "http://localhost/CourseWork02(2)/password_reset.php?token=".$token;
+$link = "http://localhost/CW2/password_reset.php?token=".$token;
 
 // Email details
 $to = $email;
@@ -129,4 +129,5 @@ button:hover {
 </body>
 
 </html>
+
 
