@@ -120,7 +120,6 @@ button:hover {
 
 <form method="POST" style="border:1px solid #ccc">
   <div class="container">
-	<a href="home.php">Home</a>
     <h1>Reset Password</h1>
     <p>Please fill in this form to reset password</p>
     <hr>
@@ -134,4 +133,5 @@ button:hover {
 </form>
 
 </body>
+
 </html>
