@@ -15,9 +15,29 @@ die;
 // kills the process invalid token found
 }
 
+
 if(isset($_POST['password'])){
-	
 $password = $_POST['password'];
+
+// strong password
+if (!preg_match('/[A-Z]/', $password)){
+echo "password must contain at least one uppercase letter.";
+exit();
+}
+else if (!preg_match('/[a-z]/', $password)){
+echo "password must contain at least one lowercase letter.";
+
+exit();
+}
+else if (!preg_match('/[0-9]/', $password)){
+echo "password must contain at least one number.";
+exit();
+}
+else if (!preg_match('/[^a-zA-Z0-9]/', $password))
+{
+echo "password must contain at least one special character.";
+exit();
+}
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
