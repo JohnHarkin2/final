@@ -7,7 +7,7 @@ if (isset($_POST['email'])){
 $email = $_POST['email'];
 // check for an email and saves it.
 
-$query = "SELECT * FROM users WHERE email='$email'";
+$query = "SELECT * FROM user WHERE email='$email'";
 $result = mysqli_query($conn,$query);
 
 // executes query to find email exists
@@ -17,7 +17,7 @@ if(mysqli_num_rows($result) >0){
 $token = md5($email . time());
 // generates token
 
-$update = "UPDATE users SET reset_token='$token' WHERE email='$email'";
+$update = "UPDATE user SET reset_token='$token' WHERE email='$email'";
 mysqli_query($conn,$update);
 
 
